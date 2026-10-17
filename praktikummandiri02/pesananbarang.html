@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Booking Sewa Alat Multimedia - AeroMedia & CinemaGear</title>
+</head>
+
+<body>
+
+    <!-- Tabel Bingkai Luar (Menyerupai Mockup Jendela Browser seperti di Modul Praktikum) -->
+    <table align="center" border="1" cellpadding="0" cellspacing="0" width="670">
+        <!-- Baris URL Browser -->
+        <tr>
+            <td align="center" bgcolor="#f5f5f5" cellpadding="6">
+                <br>
+                <small>A Web Page</small><br>
+                <strong>http://aeromedia-gear.com/pesanan_barang</strong>
+                <br><br>
+            </td>
+        </tr>
+
+        <!-- Baris Navigasi Menu Atas -->
+        <tr>
+            <td>
+                <table border="1" cellpadding="5" cellspacing="0" width="100%">
+                    <tr align="center">
+                        <td width="20%"><a href="#">Home</a></td>
+                        <td width="20%"><a href="#">Katalog Produk</a></td>
+                        <td width="20%"><a href="#">History Transaksi</a></td>
+                        <td width="20%"><a href="#">Kebijakan</a></td>
+                        <td width="20%"><a href="#">Layout</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Baris Formulir Utama -->
+        <tr>
+            <td cellpadding="15">
+                <br>
+                <form action="hasil_pesananbarang.html" method="GET" onsubmit="alert('Data pemesanan barang berhasil di-input!');">
+                    <fieldset>
+                        <legend><strong>Formulir Pemesanan &amp; Booking Sewa Alat Multimedia</strong></legend>
+                        <br>
+                        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                            <!-- Nama Penyewa -->
+                            <tr>
+                                <td width="190"><label for="nama"><strong>Nama Lengkap Penyewa</strong></label></td>
+                                <td width="15">:</td>
+                                <td>
+                                    <input type="text" id="nama" name="nama" size="38" required placeholder="Contoh: Muhammad Rajan Pratama" autofocus>
+                                </td>
+                            </tr>
+
+                            <!-- Nomor Identitas KTP / KTM -->
+                            <tr>
+                                <td><label for="nik"><strong>No. Identitas (KTP / KTM)</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" id="nik" name="nik" size="30" required placeholder="Contoh: 3276012304010005 / NIM: 0110226105">
+                                </td>
+                            </tr>
+
+                            <!-- Pilihan Paket Peralatan -->
+                            <tr>
+                                <td valign="top"><label for="paket"><strong>Pilihan Paket Alat</strong></label></td>
+                                <td valign="top">:</td>
+                                <td>
+                                    <select id="paket" name="paket" required>
+                                        <option value="" disabled>-- Pilih Paket Peralatan --</option>
+                                        <option value="Paket Drone DJI Mavic 3 Pro Cine Combo" selected>Paket Drone DJI Mavic 3 Pro Cine (Drone 4K + 3 Baterai + Smart Controller)</option>
+                                        <option value="Paket Cinema Rig Sony FX3 Full-Frame">Paket Cinema Rig Sony FX3 Full-Frame + Lensa FE 24-70mm GM II</option>
+                                        <option value="Paket Studio Podcast Shure SM7B 4-Ch">Paket Studio Podcast Shure SM7B (4 Mic + RODE Caster Pro II)</option>
+                                        <option value="Paket Lighting Studio Aputure 300D II">Paket Lighting Aputure 300D II + Light Dome + C-Stand Heavy Duty</option>
+                                        <option value="Paket Gimbal Stabilizer DJI Ronin RS3 Pro">Paket Gimbal Stabilizer DJI Ronin RS3 Pro Combo + Focus Motor</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- Detail Keperluan & Lokasi -->
+                            <tr>
+                                <td valign="top"><label for="keperluan"><strong>Detail Keperluan &amp; Lokasi</strong></label></td>
+                                <td valign="top">:</td>
+                                <td>
+                                    <textarea id="keperluan" name="keperluan" rows="3" cols="38" placeholder="Contoh: Syuting film pendek tugas kampus di Kawasan Danau UI Depok, crew 4 orang." required></textarea>
+                                </td>
+                            </tr>
+
+                            <!-- Upload Foto KTP / KTM -->
+                            <tr>
+                                <td><label for="foto_id"><strong>Upload Foto Identitas / KTM</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="file" id="foto_id" name="foto_id" required>
+                                </td>
+                            </tr>
+
+                            <!-- Tanggal Mulai Sewa -->
+                            <tr>
+                                <td><label for="tanggal"><strong>Tanggal Pengambilan</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="date" id="tanggal" name="tanggal" value="2026-10-20" required>
+                                </td>
+                            </tr>
+
+                            <!-- Durasi Sewa -->
+                            <tr>
+                                <td><label for="durasi"><strong>Durasi Sewa</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <select id="durasi" name="durasi" required>
+                                        <option value="1 Hari (24 Jam)" selected>1 Hari (24 Jam Operasional)</option>
+                                        <option value="2 Hari (Weekend Pack)">2 Hari (Weekend Pack - Promo 10%)</option>
+                                        <option value="3 Hari (Production Pack)">3 Hari (Production Pack - Diskon 15%)</option>
+                                        <option value="1 Minggu (Weekly Pass)">1 Minggu (Weekly Pass - Diskon 25%)</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- Pilihan Bank -->
+                            <tr>
+                                <td><label for="bank"><strong>Pilihan Bank Pembayaran</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <select id="bank" name="bank" required>
+                                        <option value="Bank BCA (Virtual Account)" selected>Bank BCA (Virtual Account)</option>
+                                        <option value="Bank Mandiri (Virtual Account)">Bank Mandiri (Virtual Account)</option>
+                                        <option value="Bank Syariah Indonesia (BSI VA)">Bank Syariah Indonesia (BSI Virtual Account)</option>
+                                        <option value="Bank BRI (BRIVA)">Bank BRI (BRIVA Virtual Account)</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- Alamat Email -->
+                            <tr>
+                                <td><label for="email"><strong>Alamat Email</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="email" id="email" name="email" size="35" required placeholder="Contoh: rajan.creative@gmail.com">
+                                </td>
+                            </tr>
+
+                            <!-- Number Handphone -->
+                            <tr>
+                                <td><label for="telepon"><strong>Number Handphone</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="tel" id="telepon" name="telepon" size="25" required placeholder="Contoh: +62 812-9876-5432">
+                                </td>
+                            </tr>
+
+                            <!-- Opsi Konfirmasi -->
+                            <tr>
+                                <td valign="top"><strong>Opsi Konfirmasi</strong></td>
+                                <td valign="top">:</td>
+                                <td>
+                                    <input type="checkbox" id="send_hp" name="send_hp" value="ya" checked>
+                                    <label for="send_hp">Send to Mobile Phone</label><br>
+                                    <input type="checkbox" id="send_email" name="send_email" value="ya" checked>
+                                    <label for="send_email">Send to Email</label>
+                                </td>
+                            </tr>
+
+                            <!-- Kolom Send to Mobile Phone -->
+                            <tr>
+                                <td><label for="konfirmasi_hp"><strong>Send to Mobile Phone</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="tel" id="konfirmasi_hp" name="konfirmasi_hp" size="25" value="+62 812-9876-5432">
+                                </td>
+                            </tr>
+
+                            <!-- Kolom Send to Email -->
+                            <tr>
+                                <td><label for="konfirmasi_email"><strong>Send to Email</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="email" id="konfirmasi_email" name="konfirmasi_email" size="35" value="rajan.creative@gmail.com">
+                                </td>
+                            </tr>
+
+                            <!-- Tombol Submit & Reset -->
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <br>
+                                    <input type="submit" value="Kirim Pesanan Barang">
+                                    &nbsp;&nbsp;
+                                    <input type="reset" value="Reset">
+                                    <br><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+                <br>
+            </td>
+        </tr>
+
+        <!-- Baris Footer Web Mockup -->
+        <tr>
+            <td align="center" bgcolor="#f5f5f5">
+                <small>&copy; 2026 <strong>AeroMedia &amp; CinemaGear Hub</strong>. Praktikum Mandiri 02 Desain UI/UX &amp; Pemrograman Web STT-NF.</small>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

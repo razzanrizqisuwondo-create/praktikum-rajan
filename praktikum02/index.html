@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan & Rakit PC Custom - CyberTech PC Craft</title>
+</head>
+
+<body>
+
+    <!-- Tabel Utama Pembungkus Layout Halaman (Murni HTML) -->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="720">
+        <tr>
+            <td>
+                <!-- Header Lab Komputer & Judul Halaman -->
+                <center>
+                    <h1>CyberTech PC Craft &amp; Hardware Lab</h1>
+                    <p><i>Gourmet Custom Workstation &amp; Gaming Rig Assembly - Racik Spesifikasi Komputer Impian Anda</i></p>
+                    <hr>
+                </center>
+
+                <p>Silakan isi formulir di bawah ini untuk merancang dan memesan racikan komputer custom performa tinggi sesuai kebutuhan komputasi Anda:</p>
+
+                <!-- Form Utama Mengarah ke hasil.html -->
+                <form action="hasil.html" method="GET" onsubmit="alert('Data pemesanan PC berhasil di-input!');">
+
+                    <!-- ================= FIELDSET 1: INFORMASI PEMESAN ================= -->
+                    <fieldset>
+                        <legend><strong>Informasi Pemesan (Customer Profile)</strong></legend>
+                        <br>
+                        <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="190"><label for="nama"><strong>Nama Lengkap</strong></label></td>
+                                <td width="15">:</td>
+                                <td>
+                                    <input type="text" id="nama" name="nama" size="42" required placeholder="Contoh: Muhammad Rajan Pratama" autofocus>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="telepon"><strong>Nomor WhatsApp / HP</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="tel" id="telepon" name="telepon" size="30" required placeholder="Contoh: 081298765432">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email"><strong>Alamat Email</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="email" id="email" name="email" size="35" required placeholder="Contoh: rajan.custompc@gmail.com">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label for="alamat"><strong>Alamat Pengiriman</strong></label></td>
+                                <td valign="top">:</td>
+                                <td>
+                                    <textarea id="alamat" name="alamat" rows="3" cols="45" required placeholder="Masukkan alamat lengkap pengantaran, nama jalan, RT/RW, kecamatan, dan kota tujuan"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label for="instruksi"><strong>Instruksi Khusus Perakitan</strong></label></td>
+                                <td valign="top">:</td>
+                                <td>
+                                    <textarea id="instruksi" name="instruksi" rows="2" cols="45" placeholder="Contoh: Mohon lakukan stress test suhu GPU minimal 12 jam"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <br>
+
+                    <!-- ================= FIELDSET 2: SPESIFIKASI RAKITAN PC ================= -->
+                    <fieldset>
+                        <legend><strong>Spesifikasi Komputer (Rig Customization)</strong></legend>
+
+                        <!-- Pilihan 1: Processor & Motherboard -->
+                        <p><strong>1. Pilihan Processor &amp; Motherboard Platform :</strong></p>
+                        <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                            <tr>
+                                <td>
+                                    <input type="radio" id="cpu1" name="cpu" value="AMD Ryzen 7 7800X3D + MSI MAG B650 Tomahawk WiFi" checked>
+                                    <label for="cpu1">AMD Ryzen 7 7800X3D + MSI MAG B650 Tomahawk WiFi - <b>Rp 8.950.000</b></label><br>
+
+                                    <input type="radio" id="cpu2" name="cpu" value="Intel Core i7-14700K + ASUS TUF Gaming Z790-Plus WiFi">
+                                    <label for="cpu2">Intel Core i7-14700K + ASUS TUF Gaming Z790-Plus WiFi - <b>Rp 9.600.000</b></label><br>
+
+                                    <input type="radio" id="cpu3" name="cpu" value="AMD Ryzen 9 7950X3D + ASUS ROG Strix X670E-E Gaming">
+                                    <label for="cpu3">AMD Ryzen 9 7950X3D + ASUS ROG Strix X670E-E Gaming - <b>Rp 13.800.000</b></label><br>
+
+                                    <input type="radio" id="cpu4" name="cpu" value="Intel Core i9-14900KS + ROG Maximus Z790 Dark Hero">
+                                    <label for="cpu4">Intel Core i9-14900KS + ROG Maximus Z790 Dark Hero - <b>Rp 16.500.000</b></label>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Pilihan 2: Kartu Grafis (GPU) -->
+                        <p><strong>2. Pilihan Kartu Grafis (Graphics Card / GPU) :</strong></p>
+                        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="190"><label for="gpu"><strong>Kartu Grafis Utama</strong></label></td>
+                                <td width="15">:</td>
+                                <td>
+                                    <select id="gpu" name="gpu" required>
+                                        <option value="" disabled>-- Pilih Kartu Grafis GPU --</option>
+                                        <option value="NVIDIA GeForce RTX 4070 Super 12GB GDDR6X" selected>NVIDIA GeForce RTX 4070 Super 12GB GDDR6X</option>
+                                        <option value="NVIDIA GeForce RTX 4070 Ti Super 16GB GDDR6X">NVIDIA GeForce RTX 4070 Ti Super 16GB GDDR6X</option>
+                                        <option value="NVIDIA GeForce RTX 4080 Super 16GB GDDR6X">NVIDIA GeForce RTX 4080 Super 16GB GDDR6X</option>
+                                        <option value="AMD Radeon RX 7900 XTX 24GB GDDR6">AMD Radeon RX 7900 XTX 24GB GDDR6</option>
+                                        <option value="NVIDIA GeForce RTX 4090 24GB GDDR6X">NVIDIA GeForce RTX 4090 24GB GDDR6X</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Pilihan 3: Komponen Ekstra & Pendingin -->
+                        <p><strong>3. Komponen Tambahan &amp; Sistem Pendingin (Upgrades) :</strong></p>
+                        <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="add1" name="addons" value="Liquid AIO Cooler 360mm ARGB Display" checked>
+                                    <label for="add1">Liquid AIO Cooler 360mm ARGB Display Screen <b>(+ Rp 1.650.000)</b></label><br>
+
+                                    <input type="checkbox" id="add2" name="addons" value="Upgrade RAM Corsair 64GB DDR5 6000MHz" checked>
+                                    <label for="add2">Upgrade RAM Corsair 64GB (2x32GB) DDR5 6000MHz <b>(+ Rp 2.350.000)</b></label><br>
+
+                                    <input type="checkbox" id="add3" name="addons" value="Ultra Fast NVMe SSD 2TB PCIe Gen4 Samsung 990 Pro">
+                                    <label for="add3">Ultra Fast NVMe SSD 2TB PCIe Gen4 Samsung 990 Pro <b>(+ Rp 2.750.000)</b></label><br>
+
+                                    <input type="checkbox" id="add4" name="addons" value="Power Supply Seasonic 850W 80+ Gold Full Modular">
+                                    <label for="add4">Power Supply Seasonic 850W 80+ Gold Full Modular <b>(+ Rp 1.950.000)</b></label><br>
+
+                                    <input type="checkbox" id="add5" name="addons" value="Custom Braided Cable Sleeving Carbon-Titanium">
+                                    <label for="add5">Custom Braided Cable Sleeving Carbon-Titanium <b>(+ Rp 450.000)</b></label>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Pilihan 4: Sistem Operasi & Kuantitas -->
+                        <p><strong>4. Sistem Operasi &amp; Jumlah Unit :</strong></p>
+                        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="190"><label for="os"><strong>Sistem Operasi Pre-installed</strong></label></td>
+                                <td width="15">:</td>
+                                <td>
+                                    <select id="os" name="os">
+                                        <option value="Windows 11 Pro 64-Bit Original Activated" selected>Windows 11 Pro 64-Bit Original Activated</option>
+                                        <option value="Ubuntu 24.04 LTS Developer Edition">Ubuntu 24.04 LTS (Developer &amp; AI Ready)</option>
+                                        <option value="Dual Boot Windows 11 Pro + Ubuntu Linux">Dual Boot (Windows 11 Pro + Ubuntu 24.04 LTS)</option>
+                                        <option value="Tanpa OS (Hanya Flash BIOS &amp; Burn-in Test)">Tanpa OS (Hanya Flash BIOS &amp; Burn-in Test)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="jumlah"><strong>Jumlah Unit Pesanan</strong></label></td>
+                                <td>:</td>
+                                <td>
+                                    <input type="number" id="jumlah" name="jumlah" min="1" max="10" value="1"> Unit
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <!-- ================= TOMBOL SUBMIT & RESET ================= -->
+                    <br>
+                    <center>
+                        <input type="submit" value="Kirim Konfigurasi Pesanan PC">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Reset Formulir">
+                    </center>
+                </form>
+
+                <!-- Footer Halaman -->
+                <br>
+                <hr>
+                <center>
+                    <small>&copy; 2026 <strong>CyberTech PC Craft</strong>. Praktikum Pemrograman Web &amp; UI/UX - STT Terpadu Nurul Fikri.</small>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
