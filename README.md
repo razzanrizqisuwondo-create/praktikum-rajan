@@ -11,7 +11,7 @@ Repository tugas praktikum mata kuliah **Pemrograman Web & Desain UI/UX** — ST
 * **`praktikummandiri02/`**: Praktikum Mandiri 02 — Form Booking Sewa Alat Multimedia (*AeroMedia & CinemaGear*).
   * `pesananbarang.html`: Formulir booking dan sewa alat multimedia berformat mockup browser.
   * `hasil_pesananbarang.html`: Halaman bukti pemesanan dan invoice pembayaran.
-* **`Praktikum2 UIUX Abdullah Muhammad Ash Shiddiq.pdf`**: Laporan praktikum format PDF.
+* **`Praktikum2 UIUX Razzan Rizqi Suwondo.pdf`**: Laporan praktikum format PDF.
 
 ## 🚀 Cara Menjalankan
 Buka berkas `index.html` langsung melalui peramban (browser) atau letakkan di dalam direktori root server lokal (seperti Laragon/XAMPP di `htdocs` atau `www`).
